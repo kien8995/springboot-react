@@ -30,9 +30,12 @@
     "react-router-redux": "4.0.4",
     "redux": "3.5.2",
     "redux-thunk": "2.0.1",
-    "toastr": "2.1.2"
+    "toastr": "2.1.2",
+    "classnames": "^2.2.3",
+    "js-base64": "^2.1.9"
   },
   "devDependencies": {
+    "autoprefixer": "^6.3.3",
     "babel-cli": "6.8.0",
     "babel-core": "6.8.0",
     "babel-loader": "6.2.4",
@@ -45,6 +48,12 @@
     "compression": "1.6.1",
     "cross-env": "1.0.7",
     "css-loader": "0.23.1",
+    "css-modules-require-hook": "^4.0.0",
+    "postcss-loader": "^0.8.0",
+    "postcss-modules-extract-imports": "^1.0.0",
+    "postcss-modules-local-by-default": "^1.0.0",
+    "postcss-modules-scope": "^1.0.0",
+    "postcss-modules-values": "^1.1.1",
     "enzyme": "2.2.0",
     "eslint": "2.9.0",
     "eslint-plugin-import": "1.6.1",
