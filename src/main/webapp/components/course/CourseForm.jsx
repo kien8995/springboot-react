@@ -2,7 +2,7 @@ import React, {PropTypes} from "react";
 import TextInput from "../common/TextInput.jsx";
 import SelectInput from "../common/SelectInput.jsx";
 
-const CourseForm = ({course, alllAuthors, onSave, onChange, loading, errors}) => {
+const CourseForm = ({course, alllAuthors, onSave, onChange, loading, error}) => {
     return (
         <form>
             <h1>Manage Course</h1>
@@ -12,7 +12,7 @@ const CourseForm = ({course, alllAuthors, onSave, onChange, loading, errors}) =>
                 value={course.title}
                 onChange={onChange}
                 disabled={loading}
-                error={errors.title}/>
+                error={error.title}/>
 
             <SelectInput
                 name="authorId"
@@ -22,7 +22,7 @@ const CourseForm = ({course, alllAuthors, onSave, onChange, loading, errors}) =>
                 options={alllAuthors}
                 onChange={onChange}
                 disabled={loading}
-                error={errors.authorId}/>
+                error={error.authorId}/>
 
             <TextInput
                 name="category"
@@ -30,7 +30,7 @@ const CourseForm = ({course, alllAuthors, onSave, onChange, loading, errors}) =>
                 value={course.category}
                 onChange={onChange}
                 disabled={loading}
-                error={errors.category}/>
+                error={error.category}/>
 
             <TextInput
                 name="length"
@@ -38,7 +38,7 @@ const CourseForm = ({course, alllAuthors, onSave, onChange, loading, errors}) =>
                 value={course.length}
                 onChange={onChange}
                 disabled={loading}
-                error={errors.length}/>
+                error={error.length}/>
             <br/>
             <input
                 type="submit"
@@ -56,7 +56,7 @@ CourseForm.propTypes = {
     onSave: PropTypes.func.isRequired,
     onChange: PropTypes.func.isRequired,
     loading: PropTypes.bool,
-    errors: PropTypes.object
+    error: PropTypes.object
 };
 
 export default CourseForm;
