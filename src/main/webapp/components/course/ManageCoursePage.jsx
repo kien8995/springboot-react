@@ -11,7 +11,7 @@ class ManageCoursePage extends Component {
 
         this.state = {
             course: Object.assign({}, this.props.course),
-            errors: {},
+            error: { title: "", authorId: "", category: "", length: "" },
             loading: false
         };
 
@@ -55,7 +55,7 @@ class ManageCoursePage extends Component {
                 course={this.state.course}
                 onChange={this.updateCouseState}
                 onSave={this.saveCourse}
-                errors={this.state.errors}
+                error={this.state.error}
                 loading={this.state.loading}/>
         );
     }

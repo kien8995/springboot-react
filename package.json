@@ -9,7 +9,13 @@
     "lint": "node_modules/.bin/esw webpack.config.* src/main/webapp tools",
     "lint:watch": "npm run lint -- --watch",
     "test": "mocha --reporter spec tools/testSetup.js \"src/main/webapp/**/*.test.js\"",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "remove-dist": "node_modules/.bin/rimraf src/main/resources/static/dist/*",
+    "clean-dist": "npm run remove-dist && mkdirp src/main/resources/static/dist",
+    "build:html": "babel-node tools/buildHtml.js",
+    "prebuild": "npm-run-all clean-dist lint build:html",
+    "build": "babel-node tools/build.js",
+    "postbuild": "babel-node tools/distServer.js"
   },
   "author": "kientran",
   "license": "MIT",
