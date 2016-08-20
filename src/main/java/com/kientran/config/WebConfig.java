@@ -1,5 +1,4 @@
 /*
- * Copyright 2012-2013 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +13,7 @@
  * limitations under the License.
  */
 
-package com.kientran.SpringReact.traditional.config;
+package com.kientran.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
