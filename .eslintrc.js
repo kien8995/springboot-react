@@ -24,6 +24,7 @@ module.exports = {
             "always"
         ],
         "no-unused-vars": ["warn", { "vars": "all", "args": "after-used" }],
-        "no-undef": 0
+        "no-undef": 0,
+        "no-console": 0
     }
 };

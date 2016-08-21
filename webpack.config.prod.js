@@ -20,7 +20,8 @@ export default {
     output: {
         path: DEST,
         publicPath: "/",
-        filename: "bundle.js"
+        filename: "bundle.js",
+        library: "ReactDemo"
     },
     devServer: {
         contentBase: DEST
@@ -48,18 +49,17 @@ export default {
             { test: /\.(js|jsx)$/, include: SRC, loaders: ["babel"], exclude: ["*.test.js"] },
             {
                 test: /(\.(min|global)\.css)$/,
-                loader: ExtractTextPlugin.extract("css?sourceMap")
+                loader: ExtractTextPlugin.extract("css-loader?sourceMap")
             },
             {
                 test: /(\.module\.css)$/,
                 include: SRC,
                 loader: ExtractTextPlugin.extract(
-                    "style",
-                    "css?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]",
+                    "style-loader",
+                    "css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]",
                     "postcss-loader"
                 )
             },
-
             { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file" },
             { test: /\.(woff|woff2)$/, loader: "url?prefix=font/&limit=5000" },
             { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream" },

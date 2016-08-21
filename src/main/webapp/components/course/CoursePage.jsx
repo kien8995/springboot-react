@@ -11,7 +11,7 @@ class CoursePage extends Component {
         super(props);
         this.redirectToAddCoursePage = this.redirectToAddCoursePage.bind(this);
     }
-
+    
     courseRow(course, index) {
         return <div key={index}>{course.title}</div>;
     }
