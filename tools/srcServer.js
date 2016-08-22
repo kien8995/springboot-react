@@ -21,10 +21,14 @@ app.get("*", function(req, res) {
   res.sendFile(path.join( __dirname, "../src/main/webapp/index.html"));
 });
 
-app.listen(port, function(err) {
-  if (err) {
-    console.log(err);
-  } else {
-    open(`http://localhost:${port}`);
-  }
-});
+// app.listen(port, function(err) {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     open(`http://localhost:${port}`);
+//   }
+// });
+
+//config to run on c9.io
+app.listen(process.env.PORT, process.env.IP);
+//https://springboot-react-kien8995.c9users.io
